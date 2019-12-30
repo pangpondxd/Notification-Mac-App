@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="./uikit-3/css/uikit.min.css" />
+    <script src="./uikit-3/js/uikit.min.js"></script>
+    <script src="./uikit-3/js/uikit-icons.min.js"></script>
+</head>
+  <body>
+    <h1>Hello World!</h1>
+    <button class="uk-button uk-button-default" id="notify" type="button">Submit</button>
+    <button class="uk-button uk-button-default" id="notify1" type="button">Facebook</button>
+    <script type="text/javascript">
+        document.getElementById('notify').onclick=(event)=>{
+            const notifier = require('node-notifier');
+            notifier.notify("Submit");
+        }
+        document.getElementById('notify1').onclick=(event)=>{
+            const notifier = require('node-notifier');
+            notifier.notify("Facebook", {
+                message: "Hello Tanawat",
+                button: ['Off','On']
+            });
+        }
+    </script>
+</body>
+</html>
