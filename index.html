@@ -19,9 +19,14 @@
         }
         document.getElementById('notify1').onclick=(event)=>{
             const notifier = require('node-notifier');
-            notifier.notify("Facebook", {
-                message: "Hello Tanawat",
-                button: ['Off','On']
+            const path = require('path');
+            notifier.notify(
+            {
+                title: 'Facebook',
+                icon: path.join(__dirname, './icon.jpg'),
+                message: 'Hello Tanawat',
+                button: ['Off','On'],
+                sound: true
             });
         }
     </script>
