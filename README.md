@@ -1,3 +1,3 @@
 # Notification-Mac-App
-npm install 
+npm install <br>
 npm start
