@@ -10,8 +10,8 @@
 </head>
   <body>
     <h1>Hello World!</h1>
-    <button class="uk-button uk-button-default" id="notify" type="button">Submit</button>
-    <button class="uk-button uk-button-default" id="notify1" type="button">Facebook</button>
+    <button class="uk-button uk-button-default" id="notify" type="button">Undefined</button>
+    <button class="uk-button uk-button-default" id="notify1" type="button">Defined</button>
     <script type="text/javascript">
         document.getElementById('notify').onclick=(event)=>{
             const notifier = require('node-notifier');
@@ -22,11 +22,13 @@
             const path = require('path');
             notifier.notify(
             {
-                title: 'Facebook',
+                title: 'JJ Shopping',
+                subtitle: '50% sale all categories',
                 icon: path.join(__dirname, './icon.jpg'),
                 message: 'Hello Tanawat',
-                button: ['Off','On'],
-                sound: true
+                buttons: ['Off','On'],
+                sound: true,
+                appID: 'Shopping-Cart'
             });
         }
     </script>
