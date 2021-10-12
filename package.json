@@ -10,7 +10,7 @@
   "author": "Tanawat Wirattangsakul",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^7.1.7"
+    "electron": "^11.5.0"
   },
   "dependencies": {
     "node-notifier": "^6.0.0"
